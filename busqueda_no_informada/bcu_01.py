@@ -1,7 +1,7 @@
 # Búsqueda Coste Uniforme - Uniform Cost Search
 from Nodos import Nodo
 
-def Comparar(nodo):
+def ObtenerCosto(nodo):
     return nodo.get_costo()
 
 def busqueda_BCU(conecciones, estado_inicial, solucion):
@@ -13,8 +13,9 @@ def busqueda_BCU(conecciones, estado_inicial, solucion):
     nodos_frontera.append(nodo_raiz)
     while (not resuelto) and len(nodos_frontera) != 0:
         # Ordenar lista de nodos frontera
-        nodos_frontera = sorted(nodos_frontera, key=Comparar)
+        nodos_frontera = sorted(nodos_frontera, key=ObtenerCosto)
         nodo_actual = nodos_frontera[0]
+        # nodo_actual = nodos_frontera.pop(0)
         # Extraer nodo y añadirlo a visitados
         nodos_visitados.append(nodos_frontera.pop(0))
         if nodo_actual.get_estado() == solucion:

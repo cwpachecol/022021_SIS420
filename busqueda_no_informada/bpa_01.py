@@ -15,7 +15,7 @@ def busqueda_BPA_solucion(estado_inicial, solucion):
         nodos_visitados.append(nodo_actual)
         if nodo_actual.get_estado() == solucion:
             # solucion encontrada
-            resuelto = True
+            # resuelto = True
             return nodo_actual
         else:
             # expandir nodos hijo
@@ -43,8 +43,8 @@ def busqueda_BPA_solucion(estado_inicial, solucion):
 
 
 if __name__ == "__main__":
-    estado_inicial = [4, 3, 2, 1]
-    solucion = [1, 2, 3, 4]
+    estado_inicial = ['C', 'D', 'A', 'B']
+    solucion = ['A', 'B', 'C', 'D']
     nodo_solucion = busqueda_BPA_solucion(estado_inicial, solucion)
     # mostrar resultado
     resultado = []

@@ -14,7 +14,7 @@ def busqueda_BPA_solucion(conecciones, estado_inicial, solucion):
         # extraer nodo y añadirlo a visitados
         nodos_visitados.append(nodo_actual)
         if nodo_actual.get_estado() == solucion:
-            resuelto = True
+            # resuelto = True
             return nodo_actual
         else:
             # expandir nodos hijo
@@ -43,8 +43,8 @@ if __name__ == "__main__":
         'Barcelona': {'Zaragoza', 'Santiago', 'Madrid', 'Malaga', 'Valencia'}
     }
 
-    estado_inicial = 'Malaga'
-    solucion = 'Santiago'
+    estado_inicial = 'Barcelona'
+    solucion = 'Sevilla'
     nodo_solucion = busqueda_BPA_solucion(conecciones, estado_inicial, solucion)
     # mostrar resultado
     resultado = []
